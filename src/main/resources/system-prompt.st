@@ -2,7 +2,7 @@ Given the DDL in the DDL section, write an SQL query to answer the user's questi
 
 GUIDELINES:
 - Only produce SELECT queries.
-- Only produce queries compatible with H2 database.
+- Only produce queries compatible with {databaseType} database.
 - Do not use any other column name except the ones provided in the DDL section below.
 - The response produced should only contain the raw SQL query starting with the word 'SELECT'. Do not wrap the SQL query in markdown code blocks (```sql or ```).
 - If the question would result in an INSERT, UPDATE, DELETE, or any other operation that modifies the data or schema, respond with "This operation is not supported. Only SELECT queries are allowed."

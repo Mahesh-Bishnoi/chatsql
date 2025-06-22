@@ -1,0 +1,7 @@
+{"properties": [{
+  "name": "database.type",
+  "type": "java.lang.String",
+  "description": "Type of database to connect to.",
+  "defaultValue": "h2",
+  "allowedValues": ["mysql", "postgresql", "h2"]
+}]}

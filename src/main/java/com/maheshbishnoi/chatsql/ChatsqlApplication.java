@@ -22,10 +22,12 @@ public class ChatsqlApplication {
     @Bean
     PromptTemplate systemPrompt(
             @Value("classpath:system-prompt.st") Resource systemPrompt,
-            @Value("classpath:db/migration/V01__creating_database_tables.sql") Resource ddlSchema
+            @Value("classpath:db/migration/V01__creating_database_tables.sql") Resource ddlSchema,
+            @Value("${database.type}") String databaseType
     ) throws IOException {
         PromptTemplate template = new PromptTemplate(systemPrompt);
         template.add("ddl", ddlSchema.getContentAsString(Charset.defaultCharset()));
+        template.add("databaseType", databaseType);
         return template;
     }
 
