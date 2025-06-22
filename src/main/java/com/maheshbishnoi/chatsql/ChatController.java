@@ -1,6 +1,5 @@
 package com.maheshbishnoi.chatsql;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,7 +14,6 @@ public class ChatController {
     private final SQLGenerator sqlGenerator;
     private final SQLExecutor sqlExecutor;
 
-    @Autowired
     public ChatController(SQLGenerator sqlGenerator, SQLExecutor sqlExecutor) {
         this.sqlGenerator = sqlGenerator;
         this.sqlExecutor = sqlExecutor;
