@@ -18,8 +18,7 @@ public class SQLGenerator {
                 .call()
                 .content();
 
-        assert response != null : "No response from chat client!";
-        if (!response.startsWith("SELECT")) {
+        if (response == null || !response.startsWith("SELECT")) {
             throw new InvalidQueryException(response);
         }
         return response;
