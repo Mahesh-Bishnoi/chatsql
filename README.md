@@ -15,3 +15,5 @@ This project provides an API endpoint that allows you to query a database using 
 This endpoint accepts a `question` as a query parameter, generates an SQL query based on the question, and executes it on the database.
 
 **Example Request**:
+
+http://localhost:8080/ai/query?question=
